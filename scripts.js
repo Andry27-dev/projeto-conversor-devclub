@@ -25,16 +25,26 @@ function convertValues() { /* função conveerter valores */
             currency: "EUR", }).format(inputCurrencyValue / euroToday)
     }
 
-
-
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue)
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
+        style: "currency", 
+        currency: "BRL" }).format(inputCurrencyValue)
     
+    }
 
+function changeCurrency() { 
+     const currencyName = document.getElementById("currency-name") 
 
+    if (currencySelect.value == "dolar"){
+        currencyName.innerHTML = "Dólar Americano"
+    }
 
-
-
-
+    if (currencySelect.value == "euro"){
+        currencyName.innerHTML = "Euro"
+    }
+    
 }
 
+
+
+currencySelect.addEventListener("change", changeCurrency)
 convertButton.addEventListener("click", convertValues) /* tag que adicionará o evento, ou seja, o click - ao ser clicado será acionado a funcção convertvalues */

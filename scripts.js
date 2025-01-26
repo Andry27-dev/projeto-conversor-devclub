@@ -7,24 +7,34 @@ function convertValues() { /* função conveerter valores */
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert") /* valor em real */
     const currencyValueConverted = document.querySelector(".currency-value") /* valor em Dólar */
 
+    
+
     const dolarToday = 6
     const euroToday = 7.5
 
+    
+
+    if (currencySelect.value == "dolar"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", { 
+            style: "currency", 
+            currency: "USD", }).format(inputCurrencyValue / dolarToday)
+    }
+    if (currencySelect.value == "euro"){
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("de-DE", { 
+            style: "currency", 
+            currency: "EUR", }).format(inputCurrencyValue / euroToday)
+    }
+
+
+
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(inputCurrencyValue)
+    
 
 
 
 
 
-    const convertedValue = inputCurrencyValue / dolarToday /* valor de conversão */
 
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {style: "currency", currency: "BRL"}).format(inputCurrencyValue)
-    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(convertedValue)
-
-
-
-
-
-   
 }
 
 convertButton.addEventListener("click", convertValues) /* tag que adicionará o evento, ou seja, o click - ao ser clicado será acionado a funcção convertvalues */

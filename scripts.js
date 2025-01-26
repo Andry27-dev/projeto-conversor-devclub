@@ -11,13 +11,13 @@ function convertValues() { /* função conveerter valores */
     const convertedValue = inputCurrencyValue / dolarToday
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {style: "currency", currency: "BRL"}).format(inputCurrencyValue)
-    currencyValueConverted.innerHTML = convertedValue
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(convertedValue)
 
 
 
 
 
-    console.log(convertedValue)
+   
 }
 
 convertButton.addEventListener("click", convertValues) /* tag que adicionará o evento, ou seja, o click - ao ser clicado será acionado a funcção convertvalues */

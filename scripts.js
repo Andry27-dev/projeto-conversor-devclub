@@ -44,6 +44,8 @@ function changeCurrency() {
         currencyName.innerHTML = "Euro"
         currencyImage.src = "./assets/image/Euro.png"
     }
+   
+    convertValues()  
     
 }
 

@@ -32,14 +32,17 @@ function convertValues() { /* função conveerter valores */
     }
 
 function changeCurrency() { 
-     const currencyName = document.getElementById("currency-name") 
+     const currencyName = document.getElementById("currency-name")
+     const currencyImage = document.querySelector(".currency-img")
 
     if (currencySelect.value == "dolar"){
         currencyName.innerHTML = "Dólar Americano"
+        currencyImage.src = "./assets/image/EUA.png"
     }
 
     if (currencySelect.value == "euro"){
         currencyName.innerHTML = "Euro"
+        currencyImage.src = "./assets/image/Euro.png"
     }
     
 }

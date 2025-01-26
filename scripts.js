@@ -8,7 +8,7 @@ function convertValues() { /* função conveerter valores */
 
     const dolarToday = 5.0
 
-    const convertedValue = inputCurrencyValue / dolarToday
+    const convertedValue = inputCurrencyValue / dolarToday /* valor de conversão */
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {style: "currency", currency: "BRL"}).format(inputCurrencyValue)
     currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(convertedValue)

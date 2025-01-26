@@ -8,13 +8,19 @@
     outline: none;
 }
 body {
-    background-color: #8A51FC; 
+        background-image: url('./assets/image/Fundo\ -\ floresta.png'); /* Adiciona a imagem */
+        background-repeat: no-repeat; /* Evita repetir a imagem */
+        background-size: cover; /* Faz a imagem cobrir todo o fundo */
+        background-position: center; /* Centraliza a imagem */
+      
+      
 }
 
 .logo {
-    width: 300px;
+    width: 450px;
     display: block;
-    margin: 20px auto;
+    margin: -50px auto;
+
 }
 
 main {
@@ -45,7 +51,7 @@ select, input {
 }
 
 button {
-    background: #772FD3;
+    background: #0d8f23;
     border-radius: 5px;
     width: 100%;
     border: none;
@@ -65,7 +71,7 @@ button:active {
     opacity: 0.6;
 }
 section {
-border: 1px solid #772fd3;
+border: 1px solid #0d8f23;
 border-radius: 20px;
 margin-top: 36px;
 padding: 12px;
@@ -76,7 +82,8 @@ align-items: center;
 }
 
 .arrow-img {
-margin: 15px 0;    
+margin: 5px 0;
+width: 150px;   
 }
 
 .currency-box {
@@ -88,7 +95,7 @@ margin: 15px 0;
 }
 .currency {
 color: #777777;
-font-size: 14px;
+font-size: 20px;
 }
 
 .currency-value, .currency-value-to-convert{

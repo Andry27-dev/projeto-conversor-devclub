@@ -26,6 +26,12 @@ function convertValues() { /* Define a função que realiza a conversão de valo
 
     // Verifica qual moeda foi selecionada e realiza a conversão
    
+// Formata e exibe o valor original (em reais) no padrão brasileiro (BRL)
+currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
+    style: "currency", 
+    currency: "BRL",
+}).format(inputCurrencyValue)
+
 
     if (currencySelect.value == "pesos") {
         /* Se a moeda selecionada for "euro", realiza a conversão 
@@ -55,13 +61,8 @@ function convertValues() { /* Define a função que realiza a conversão de valo
 
 
 
-    // Formata e exibe o valor original (em reais) no padrão brasileiro (BRL)
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
-        style: "currency", 
-        currency: "BRL" 
-    }).format(inputCurrencyValue)
-
     
+
     }
 }
 

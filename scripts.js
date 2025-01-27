@@ -26,13 +26,6 @@ function convertValues() { /* Define a função que realiza a conversão de valo
 
     // Verifica qual moeda foi selecionada e realiza a conversão
    
-// Formata e exibe o valor original (em reais) no padrão brasileiro (BRL)
-currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
-    style: "currency", 
-    currency: "BRL",
-}).format(inputCurrencyValue)
-
-
     if (currencySelect.value == "pesos") {
         /* Se a moeda selecionada for "euro", realiza a conversão 
            e formata o valor no padrão europeu (EUR). */
@@ -58,12 +51,13 @@ currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency", 
             currency: "USD", 
         }).format(inputCurrencyValue / dolarToday)
-
-
-
-    
-
     }
+
+    // Formata e exibe o valor original (em reais) no padrão brasileiro (BRL)
+currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", { 
+    style: "currency", 
+    currency: "BRL",
+}).format(inputCurrencyValue)
 }
 
 function changeCurrency() { /* Define a função que muda as informações de acordo com a moeda selecionada */

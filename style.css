@@ -8,7 +8,7 @@
     outline: none;
 }
 body {
-        background-image: url('./assets/image/Fundo\ -\ floresta.png'); /* Adiciona a imagem */
+        background-image: url('./assets/image/fundo.png'); /* Adiciona a imagem */
         background-repeat: no-repeat; /* Evita repetir a imagem */
         background-size: cover; /* Faz a imagem cobrir todo o fundo */
         background-position: center; /* Centraliza a imagem */
@@ -106,4 +106,69 @@ font-size: 20px;
 color: #555555;
 font-weight: 700;
 font-size: 20px;
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+    body {
+        background-size: auto; /* Evita cortes na imagem de fundo */
+    }
+
+    .logo {
+        max-width: 250px; /* Reduz o tamanho máximo da logo */
+        margin: -20px auto;
+    }
+
+    main {
+        padding: 16px; /* Reduz o padding geral */
+        border-radius: 10px; /* Menos arredondado */
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .arrow-img {
+        width: 100px; /* Reduz o tamanho da seta */
+    }
+
+    img.currency-img {
+        width: 40px; /* Ajusta as imagens de moedas */
+    }
+
+    select, input, button {
+        height: 40px; /* Ajusta a altura dos inputs e botão */
+        font-size: 14px;
+    }
+
+    .currency, .currency-value, .currency-value-to-convert {
+        font-size: 16px; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Media Queries para telas muito pequenas (smartphones antigos) */
+@media (max-width: 480px) {
+    .logo {
+        max-width: 200px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .arrow-img {
+        width: 80px;
+    }
+
+    img.currency-img {
+        width: 30px;
+    }
+
+    select, input, button {
+        font-size: 12px;
+    }
+
+    .currency, .currency-value, .currency-value-to-convert {
+        font-size: 14px;
+    }
 }
